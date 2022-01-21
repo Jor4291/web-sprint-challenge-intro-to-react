@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 import axios from 'axios';
+// import Character from './Character'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -21,13 +22,15 @@ const [swData, setSWData] = useState([]);
   return (
     
     <div className="App">
+
       <h1 className="Header">Characters</h1>
+
       {
         swData.map(swCharacter => {
           return (
-          <article> 
+          <article key={`${swCharacter.id}`}> 
             <h2>{swCharacter.name}</h2>
-            <p>{swCharacter.name} </p>
+            <p> {`${swCharacter.name} was born in ${swCharacter.birth_year} on their home plant of ${swCharacter.homeworld}. This ${swCharacter.eye_color} eyed, ${swCharacter.hair_color} haired ${swCharacter.species}. comes in with a height of ${swCharacter.height} and a mass of ${swCharacter.mass}. You can learn more about ${swCharacter.name} and their adventures by watching ${swCharacter.films}`} </p>
           </article>
           )
           })
