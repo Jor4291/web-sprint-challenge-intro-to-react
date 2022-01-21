@@ -16,12 +16,29 @@ const [swData, setSWData] = useState([]);
       setSWData(res.data)
     }).catch(err => console.log(err))
    }, [])
+
+
   return (
     
     <div className="App">
       <h1 className="Header">Characters</h1>
+      {
+        swData.map(swCharacter => {
+          return (
+          <article> 
+            <h2>{swCharacter.name}</h2>
+            <p>{swCharacter.name} </p>
+          </article>
+          )
+          })
+        }
+          
     </div>
   );
-}
+      }
+    
+
+// people = swData
+// person = swCharacter
 
 export default App;
