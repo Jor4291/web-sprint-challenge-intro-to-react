@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import Character from './components/Character'
 
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -15,7 +16,8 @@ const [swData, setSWData] = useState([]);
     .then(res =>{
       console.log(res.data)
       setSWData(res.data)
-    }).catch(err => console.log(err))
+    })
+     .catch(err => console.log(err))
    }, [])
 
 
@@ -31,7 +33,6 @@ const [swData, setSWData] = useState([]);
              <Character 
             key={`${swCharacter.id}`} 
             swCharacter={swCharacter}/>
-
           )
           })
         }
@@ -40,7 +41,6 @@ const [swData, setSWData] = useState([]);
   );
       }
 
-// people = swData
-// person = swCharacter
+
 
 export default App;
