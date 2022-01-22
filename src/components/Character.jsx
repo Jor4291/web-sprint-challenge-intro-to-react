@@ -6,7 +6,7 @@ const Character = (props) => {
 const { swCharacter } = props;
 
 
-    console.log(props)
+    
     return(
           <article > 
             <h1>{swCharacter.name}</h1>
