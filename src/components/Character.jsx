@@ -9,6 +9,8 @@ const H1 = styled.h1`
   justify-content: center;
   align-item: baseline;
   background: #C7C7C1;
+  margin-left:120px;
+  margin-right:120px;
 `
 const P = styled.p`
   display: flex;
@@ -23,8 +25,8 @@ const H3 = styled.h3`
   justify-content: center;
   align-item: center;
   background: #C7C7C1;
-  margin-left:250px;
-  margin-right: 250px;
+  margin-left:350px;
+  margin-right: 350px;
 `
 const H4 = styled.h4`
    display: flex;
