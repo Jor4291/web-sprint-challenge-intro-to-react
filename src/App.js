@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 import axios from 'axios';
-import Character from './components/Character'
+import Character from './components/Character';
+import styled from 'styled-components';
+
+
+const Div = styled.div`
+color: ${props => props.currentPage>1 ? 'blue' : 'red'};
+`
 
 
 const App = () => {
@@ -9,10 +15,14 @@ const App = () => {
   // the state properties here.
 const [swData, setSWData] = useState([]);
 const [currentPage, setPage] = useState(1);
-console.log("current page: ", currentPage)
+
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
+
+
+
+
 
 const pageSelector = (newPageNumber) =>{
   setPage(newPageNumber);
